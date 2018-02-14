@@ -19,7 +19,18 @@ require_once("config.php");
 // echo json_encode($search);
 
 //Carrega dados do usuario se senha e login forem corretos
+// $usuario = new Usuario();
+// $usuario->login("Root","12345");
+// echo $usuario;
+
+//Criando novo usuario
+// $aluno = new Usuario("aluno","@#aluno");
+// $aluno->insert();
+// echo $aluno;
+
+//Atualizando usuarios
 $usuario = new Usuario();
-$usuario->login("Root","12345");
+$usuario->loadById(3);
+$usuario->update("professor","15243");
 echo $usuario;
  ?>
